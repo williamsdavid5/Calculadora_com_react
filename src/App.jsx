@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Display, Botao } from "./Componentes"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Display></Display>
+      <table border={1}>
+        <tbody>
+          <tr>
+            <td><Botao operacao="X²" /></td><td><Botao operacao="/" /></td><td><Botao operacao="X" /></td><td><Botao operacao="del" /></td>
+          </tr>
+          <tr>
+            <td><Botao operacao="9" /></td><td><Botao operacao="8" /></td><td><Botao operacao="7" /></td><td><Botao operacao="+" /></td>
+          </tr>
+          <tr>
+            <td><Botao operacao="6" /></td><td><Botao operacao="5" /></td><td><Botao operacao="4" /></td><td><Botao operacao="-" /></td>
+          </tr>
+          <tr>
+            <td><Botao operacao="3" /></td><td><Botao operacao="2" /></td><td><Botao operacao="1" /></td><td><Botao operacao="=" /></td>
+          </tr>
+          <tr>
+            <td><Botao operacao="src" /></td><td><Botao operacao="0" /></td><td><Botao operacao="." /></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+
     </>
   )
 }
